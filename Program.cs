@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 
-string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+string connection = "Server = (localdb)\\mssqllocaldb;Database = userstoredb;Trusted_Connection=true";
 
 
-builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<UsersContext>(options => options.UseSqlServer(connection));
 
 builder.Services.AddControllersWithViews();
 
