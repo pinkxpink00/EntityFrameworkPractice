@@ -9,5 +9,10 @@ namespace EFPractice.Models
         {
             Database.EnsureCreated();
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.LogTo(Console.WriteLine);
+        }
     }
 }
