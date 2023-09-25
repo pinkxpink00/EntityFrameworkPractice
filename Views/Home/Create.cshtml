@@ -1,0 +1,17 @@
+﻿@model EFPractice.Models.User
+
+<h2>Add Users</h2>
+
+<form asp-action="create" asp-controller="home">
+	<p>
+		<label asp-for="Name">Name</label><br />
+		<input type="text" asp-for="Name"/>
+	</p>
+	<p>
+		<label asp-for="Age">Age</label><br />
+		<input type="number" asp-for="Age" />
+	</p>
+	<p>
+		<input type="submit" value="send" />
+	</p>
+</form>
